@@ -51,7 +51,7 @@ export default function HowItWorks() {
               
               <div className="relative">
                 {/* Circle marker - positioned to overlay the vertical line */}
-                <div className="absolute -left-2  w-4 h-4 rounded-full bg-step"></div>
+                <div className="absolute -left-3  w-6 h-6 rounded-full bg-step"></div>
                 
                 <div className='pl-20 pb-12' >
                   <h3 className="text-[40px] font-bold  mb-5 max-w-xl">{step.title}</h3>
