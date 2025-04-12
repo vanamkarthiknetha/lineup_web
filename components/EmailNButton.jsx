@@ -6,6 +6,7 @@ const EmailNButton = ({ hero = true }) => {
   
 
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -25,6 +26,9 @@ const EmailNButton = ({ hero = true }) => {
   
 
   const handleClick = async () => {
+    toast.dismiss()
+    setLoading(true)
+    try {
     if (!email) {
       toast.error("Please enter an email address",toastStyles);
       return;
@@ -34,7 +38,6 @@ const EmailNButton = ({ hero = true }) => {
       toast.error("Please enter a valid email address",toastStyles);
       return;
     }
-    try {
       const {success,message} = await joinWaitList(email);
       if (success) {
         toast.success(message,toastStyles)
@@ -45,6 +48,7 @@ const EmailNButton = ({ hero = true }) => {
       toast.error("Failed to join waitlist. Please try again.",toastStyles);
     } finally {
       setEmail("");
+      setLoading(false)
     }
   };
 
@@ -67,9 +71,9 @@ const EmailNButton = ({ hero = true }) => {
         onClick={handleClick}
         className={`h-[51px] px-6 bg-white text-black ${
           hero ? "font-semibold" : ""
-        } text-[20px] leading-[100%] rounded-md`}
+        } text-[20px] leading-[100%] rounded-md min-w-[250px] text-center active:bg-white transition-colors duration-150 hover:bg-white/50`}
       >
-        Join the waitlist
+        {loading?"Joining...":"Join the waitlist"}
       </button>
     </div>
   );
