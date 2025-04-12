@@ -71,7 +71,7 @@ const EmailNButton = ({ hero = true }) => {
         onClick={handleClick}
         className={`h-[51px] px-6 bg-white text-black ${
           hero ? "font-semibold" : ""
-        } text-[20px] leading-[100%] rounded-md min-w-[250px] text-center active:bg-white transition-colors duration-150 hover:bg-white/50`}
+        } text-[20px] leading-[100%] rounded-md min-w-[250px] text-center active:bg-white transition-colors duration-150 hover:bg-white/75`}
       >
         {loading?"Joining...":"Join the waitlist"}
       </button>
