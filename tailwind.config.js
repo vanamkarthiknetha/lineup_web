@@ -18,7 +18,7 @@ module.exports = {
         step:"#2C2C2C"
       },
       screens: {
-        'xs': '414px',
+        'xs': '400px',
       }
     },
   },
