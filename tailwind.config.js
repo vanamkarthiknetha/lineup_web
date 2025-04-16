@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       colors:{
         bghero: "#0F0000",
-        bgsec:"#0D0D0D",
+        bgcard:"#0D0D0D",
         border:'#2C2C2C',
         desc:"#B9B9B9",
         step:"#2C2C2C"

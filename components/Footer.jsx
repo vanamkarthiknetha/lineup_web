@@ -10,20 +10,26 @@ const inter = Inter({
 
 const Footer = () => {
   return (
-    <footer className="relative bottom-0  mt-36">
-      <div className="relative">
+    <footer className="flex flex-col bg-bgcard border border-[#303133] rounded-2xl m-16 ">
+      <div className="flex flex-col w-[80%] mx-auto gap-6 mt-10">
         <Image
           src="/LineUp_Logo_White 1.png"
           width={82}
           height={75}
           alt="logo"
-          className="absolute bottom-0 left-[198px] "
+          className=""
         />
+          <h1 className="text-[15px]">
+          After dark, It’s all yours
+          </h1>
       </div>
-      <div className="flex mx-auto w-[954.22px] gap-28  pb-14 pt-32">
-        <div className="flex flex-col gap-y-6 justify-end">
+      <div className="flex flex-col lg:flex-row  mx-auto w-[80%] gap-28  pb-14 pt-14">
+        <div className="flex flex-col gap-y-8 justify-end">
+        <h1 className="text-[16px] font-semibold">Contact details</h1>
+        <div className="flex flex-col gap-6">
           <p className="text-[18px]">+1 (7635) 547-12-97</p>
           <Link href={'mailto:support@lineup.com'} className={`${inter.className} text-[16px]`}>support@lineup.com</Link>
+          </div>
         </div>
         <div className="flex flex-col gap-8">
           <h1 className="text-[16px] font-semibold">Quick Links</h1>
@@ -35,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex-grow relative">
-          <div className="absolute grid grid-cols-3 bottom-0 right-0 gap-x-3">
+          <div className="absolute grid grid-cols-3 bottom-0 lg:right-0 gap-x-3">
             <Link href={"#"}>
               <Image
                 src="/icons/Linkedin.png"
@@ -66,10 +72,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-[954.22px] border-t-2 border-border mx-auto">
+      <div className="w-[80%] border-t-2 border-border mx-auto">
         <div className="flex">
           <p
-            className={`${inter.className} mx-auto font-[16px] leading-[100%] pt-10 pb-28`}
+            className={`${inter.className} mx-auto font-[16px]  p-10 `}
           >
             © 2020 Lift Media. All rights reserved
           </p>

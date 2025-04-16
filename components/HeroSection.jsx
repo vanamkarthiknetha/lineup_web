@@ -6,8 +6,8 @@ import EmailNButton from "./Button";
 
 const HeroSection = () => {
   return (
-    <section className="flex min-h-screen">
-      <div className="flex flex-col">
+    <section className="flex flex-col lg:flex-row min-h-screen p-12">
+      <div className="flex flex-col gap-20">
         <Image
           src="/LineUp_Logo_White 1.png"
           width={82}
@@ -16,12 +16,10 @@ const HeroSection = () => {
           className=""
         />
         <div className="">
-          <h1 className="text-[80px]">
+          <h1 className="w-[90%] text-[80px] leading-tight">
           After dark, It’s all yours
           </h1>
-        </div>
-        <div className="">
-          <p className="text-[20px]">
+          <p className="text-[20px] mt-8">
             The first all in one hub for event organization 
           </p>
         </div>
@@ -32,7 +30,7 @@ const HeroSection = () => {
       <div className=" m-auto">
       <Image
           src="/hero/iPhone 16 Pro 1.png"
-          width={800}
+          width={900}
           height={450}
           alt="hero"
           className=""
