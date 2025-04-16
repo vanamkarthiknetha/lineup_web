@@ -10,9 +10,9 @@ const FeatureCard = ({
 }) => {
   return (
     <div
-      className={`flex  ${
+      className={` flex  ${
         vertical ? "flex-col lg:flex-row h-[80vh] lg:h-[40vh]" : "flex-col h-[80vh] lg:h-[90vh]"
-      } relative rounded-2xl overflow-hidden bg-bgcard border border-[#303133]  ${
+      } relative rounded-2xl overflow-hidden bg-bgcard  border border-[#303133]  ${
         !vertical && major ? "lg:w-[75%]" : ""
       }`}
     >
@@ -24,7 +24,7 @@ const FeatureCard = ({
         <p className="text-[20px] ">{description}</p>
       </div>
       <div
-        className={`flex ${
+        className={`hidden xs:flex = ${
           vertical ? "w-full lg:w-1/2 h-full" : " h-3/5"
         }  lg:items-center lg:justify-around `}
       >

@@ -16,6 +16,9 @@ module.exports = {
         border:'#2C2C2C',
         desc:"#B9B9B9",
         step:"#2C2C2C"
+      },
+      screens: {
+        'xs': '414px',
       }
     },
   },
