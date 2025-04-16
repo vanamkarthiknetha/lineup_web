@@ -87,7 +87,7 @@ export default function HowToOrganize() {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-black px-2 sm:px-10">
+    <div className="flex flex-col w-full min-h-screen  px-2 sm:px-10">
       <h1 className="text-[30px] font-semibold text-center py-16 ">
         How to organize an event on LineUp?
       </h1>

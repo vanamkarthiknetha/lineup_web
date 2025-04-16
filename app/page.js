@@ -5,6 +5,7 @@ import ForWho from "@/components/ForWho";
 import HeroSection from "@/components/HeroSection";
 import HowToOrganize from "@/components/HowToOrganize";
 import JoinUsNow from "@/components/JoinUsNow";
+import KnowMore from "@/components/KnowMore";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <ForWho/>
       <Cover/> 
       <HowToOrganize/>
+      <KnowMore/>
       <JoinUsNow/>    
       <Footer/>
     </main>

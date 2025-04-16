@@ -29,7 +29,7 @@ const HeroSection = () => {
       </div>
       <div className="m-auto">
       <Image
-          src="/hero/iPhone 16 Pro 1.png"
+          src="/hero/hero.png"
           width={900}
           height={450}
           alt="hero"
