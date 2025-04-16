@@ -17,9 +17,9 @@ export default function ForWho() {
       <h1 className="text-[30px] font-semibold text-center">For who?</h1>
       
       {/* Main container with hidden scrollbar */}
-      <div className="relative w-full overflow-x-auto overflow-y-hidden hide-scrollbar">
+      <div className="relative w-full h-[60vh] sm:h-[90vh] overflow-x-auto overflow-y-hidden hide-scrollbar">
         {/* Flex container for centering content */}
-        <div className="flex xl:justify-center gap-4 whitespace-nowrap">
+        <div className="flex pl-24 sm:pl-0 xl:justify-center gap-4 whitespace-nowrap">
           {mobileScreens.map((screen, index) => (
             <div 
               key={index}
@@ -32,7 +32,7 @@ export default function ForWho() {
               {/* Phone frame with hover effect */}
               <div 
                 className={` transform transition-transform duration-500 ${
-                  hoveredIndex === index ? 'scale-110' : 'scale-100'
+                  hoveredIndex === index ? 'scale-125' : 'scale-100'
                 }`}
                 style={{
                   width: '14rem',
