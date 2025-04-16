@@ -10,7 +10,7 @@ const inter = Inter({
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-bgcard border border-[#303133] rounded-2xl m-16 ">
+    <footer className="flex flex-col bg-bgcard border border-[#303133] rounded-2xl m-5 sm:m-16 ">
       <div className="flex flex-col w-[80%] mx-auto gap-6 mt-10">
         <Image
           src="/LineUp_Logo_White 1.png"
@@ -23,7 +23,7 @@ const Footer = () => {
           After dark, It’s all yours
           </h1>
       </div>
-      <div className="flex flex-col lg:flex-row  mx-auto w-[80%] gap-28  pb-14 pt-14">
+      <div className="flex flex-col lg:flex-row  mx-auto w-[80%] gap-16 sm:gap-28  pb-14 pt-14">
         <div className="flex flex-col gap-y-8 justify-end">
         <h1 className="text-[16px] font-semibold">Contact details</h1>
         <div className="flex flex-col gap-6">

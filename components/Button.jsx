@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const EmailNButton = ({ hero = true }) => {
+const Button = ({ hero = true }) => {
   const router = useRouter()
 
   
@@ -15,8 +15,8 @@ const EmailNButton = ({ hero = true }) => {
   return (
       <button
         onClick={handleClick}
-        className={`py-4 px-6 bg-white text-black ${
-          hero ? "min-w-[250px]" : "min-w-[350px]"
+        className={` px-6 bg-white text-black ${
+          hero ? "min-w-[250px] py-4" : "min-w-[350px] py-3"
         } text-[20px] font-semibold  rounded-full  text-center active:bg-white transition-colors duration-150 hover:bg-white/75`}
       >
         Join the waitlist
@@ -24,4 +24,4 @@ const EmailNButton = ({ hero = true }) => {
   );
 };
 
-export default EmailNButton;
+export default Button;

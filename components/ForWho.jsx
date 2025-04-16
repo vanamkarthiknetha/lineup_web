@@ -19,7 +19,7 @@ export default function ForWho() {
       {/* Main container with hidden scrollbar */}
       <div className="relative w-full overflow-x-auto overflow-y-hidden hide-scrollbar">
         {/* Flex container for centering content */}
-        <div className="flex justify-center gap-4 whitespace-nowrap">
+        <div className="flex xl:justify-center gap-4 whitespace-nowrap">
           {mobileScreens.map((screen, index) => (
             <div 
               key={index}
@@ -54,7 +54,7 @@ export default function ForWho() {
       <div className="text-center">
         <h2 className="text-[50px] font-semibold">Venues</h2>
         <p className="text-desc text-[15px]">nightclub, bar, restaurant, or any venue looking to host events.</p>
-        <p className="text-[20px] max-w-[55%] mx-auto mt-10">Nightclub, bar, restaurant, boutique—or any spot? LineUp got you . List your venue, get discovered by the city's greatest event organizers, or book DJs, collectives,  labels to pack your space. Easily set up entries, sell out nights, and own your city.</p>
+        <p className="text-[20px] max-w-[95%] sm:max-w-[55%] mx-auto mt-10">Nightclub, bar, restaurant, boutique—or any spot? LineUp got you . List your venue, get discovered by the city's greatest event organizers, or book DJs, collectives,  labels to pack your space. Easily set up entries, sell out nights, and own your city.</p>
       </div>
       
      

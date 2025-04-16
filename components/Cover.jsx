@@ -3,7 +3,7 @@ import React from 'react'
 
 const Cover = () => {
   return (
-    <div className="relative h-[85vh] w-full overflow-hidden mt-20">
+    <div className="relative h-[50vh] sm:h-[85vh] w-full overflow-hidden mt-20">
       {/* Background image */}
       <img 
         src="/cover/iPhone 16 Pro.png" 

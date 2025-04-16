@@ -3,6 +3,8 @@ import Cover from "@/components/Cover";
 import Footer from "@/components/Footer";
 import ForWho from "@/components/ForWho";
 import HeroSection from "@/components/HeroSection";
+import HowToOrganize from "@/components/HowToOrganize";
+import JoinUsNow from "@/components/JoinUsNow";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -17,7 +19,9 @@ export default function Home() {
     <main className="flex flex-col bg-bghero ">
       <HeroSection /> 
       <ForWho/>
-      <Cover/>     
+      <Cover/> 
+      <HowToOrganize/>
+      <JoinUsNow/>    
       <Footer/>
     </main>
   );
