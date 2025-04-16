@@ -1,54 +1,42 @@
 import Image from "next/image";
 import React from "react";
-import EmailNButton from "./EmailNButton";
+import EmailNButton from "./Button";
 
 
 
 const HeroSection = () => {
   return (
-    <section className=" bg-bghero  h-[688px] ">
-      <div className="relative">
+    <section className="flex min-h-screen">
+      <div className="flex flex-col">
         <Image
           src="/LineUp_Logo_White 1.png"
           width={82}
           height={75}
           alt="logo"
-          className="absolute top-[43px] left-[1155px]"
+          className=""
         />
-        <div className="absolute top-[103px] left-[81px] w-[746px] h-[244px]">
-          <h1 className="font-semibold text-[100px] leading-[100%] ">
-            Make Events Great Again
+        <div className="">
+          <h1 className="text-[80px]">
+          After dark, It’s all yours
           </h1>
         </div>
-        <div className="absolute w-[1142px] h-[56px] top-[355px] left-[81px]">
-          <p className="font-semibold text-[46px] leading-[100%] ">
-            Improving the way you’re going out*{" "}
+        <div className="">
+          <p className="text-[20px]">
+            The first all in one hub for event organization 
           </p>
         </div>
-        <div className="absolute top-[450px] left-[81px]">
+        <div className="">
         <EmailNButton/>
         </div>
-        {/* Masked "LineUp" Text */}
-          <div className={`absolute top-[435px] left-[47px]  text-[334px] font-[750] pointer-events-none `}
-          style={{fontFamily:""}}
-          >
-            <div className="relative mx-auto">
-              {/* Base text - Bottom half (solid white) */}
-              <div className="text-white ">
-                LINEUP
-              </div>
-              
-              {/* Overlay for top half - creates the outline effect */}
-              <div className="absolute top-0 left-0 right-0 h-1/2 flex items-start overflow-hidden ">
-                <div 
-                  className="text-black " 
-                  style={{ WebkitTextStroke: '3px #D9D9D9' }}
-                >
-                  LINEUP
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div className=" m-auto">
+      <Image
+          src="/hero/iPhone 16 Pro 1.png"
+          width={800}
+          height={450}
+          alt="hero"
+          className=""
+        />
       </div>
     </section>
   );
