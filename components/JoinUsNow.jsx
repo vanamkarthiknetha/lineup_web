@@ -18,7 +18,7 @@ const JoinUsNow = () => {
         <div className="mx-10 sm:mx-0">
           <h1 className="sm:w-[90%] text-[100px] font-bold leading-tight">Join us now.</h1>
           <p className="text-[20px] font-bold mt-8">
-          "…AND WORK WITH US TO CHANGE HOW THE WORLD EXPERIENCES EVENTS.
+          …AND WORK WITH US TO CHANGE HOW THE WORLD EXPERIENCES EVENTS.
           </p>
         </div>
         <div
