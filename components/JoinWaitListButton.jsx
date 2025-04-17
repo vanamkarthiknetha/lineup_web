@@ -78,7 +78,7 @@ const router = useRouter()
       </div>
     );
   return (
-    <div className="flex flex-col md:flex-row gap-2 justify-around">
+    <div className="flex flex-col-reverse md:flex-row gap-2 justify-around">
       <button
         onClick={handleBtn1Click}
         className={` py-2 md:px-52 border border-[#817E7E] bg-[#1D1D1D] text-[20px] font-semibold  rounded-md  text-center active:bg-[#817E7E] transition-colors duration-150 hover:bg-[#817E7E]/75`}
