@@ -1,3 +1,4 @@
+import { motion, useInView } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
 export default function HowToOrganize() {
@@ -86,8 +87,17 @@ export default function HowToOrganize() {
     });
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   return (
-    <div className="flex flex-col w-full min-h-screen  px-2 sm:px-10">
+    <motion.div
+      ref={ref}
+      initial={{ y: 80, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : {}}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="flex flex-col w-full min-h-screen  px-2 sm:px-10"
+    >
       <h1 className="text-[30px] font-semibold text-center py-16 ">
         How to organize an event on LineUp?
       </h1>
@@ -151,6 +161,6 @@ export default function HowToOrganize() {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

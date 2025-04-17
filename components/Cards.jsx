@@ -1,4 +1,5 @@
-import React from "react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 // Card Component
 const FeatureCard = ({
@@ -8,15 +9,25 @@ const FeatureCard = ({
   vertical = false,
   major = false,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial={{ y: 80, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : {}}
+      transition={{ duration: 0.7, ease: "easeOut" }}
       className={` flex  ${
-        vertical ? "flex-col lg:flex-row h-[80vh] lg:h-[40vh]" : "flex-col h-[80vh] lg:h-[90vh]"
+        vertical
+          ? "flex-col lg:flex-row h-[80vh] lg:h-[40vh]"
+          : "flex-col h-[80vh] lg:h-[90vh]"
       } relative rounded-2xl overflow-hidden bg-bgcard  border border-[#303133]  ${
         !vertical && major ? "lg:w-[75%]" : ""
       }`}
     >
-      <div className={`${vertical ? "w-full lg:w-1/2" : "h-2/5"}   p-8 space-y-4`}>
+      <div
+        className={`${vertical ? "w-full lg:w-1/2" : "h-2/5"}   p-8 space-y-4`}
+      >
         <div className="flex flex-col items-start gap-2">
           <div className="w-7 h-7 bg-white rounded-full "></div>
           <h3 className="text-[30px] font-semibold ">{title}</h3>
@@ -32,13 +43,15 @@ const FeatureCard = ({
           src={imageSrc}
           alt={`${title} feature illustration`}
           className={` ${
-            !vertical && major ? "w-full lg:w-1/2 lg:h-full justify-center" : " h-full"
+            !vertical && major
+              ? "w-full lg:w-1/2 lg:h-full justify-center"
+              : " h-full"
           } object-cover  ${
             vertical && major ? "w-full lg:w-1/2 justify-center" : "w-full"
           } `}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
