@@ -42,7 +42,7 @@ const Beta = () => {
         ))}
       </div>
       <JoinWaitListButton
-        btn1Text="Cancel"
+        btn1Text="Back"
         btn2Text="Next"
         handleBtn1Click={() => router.back()}
         handleBtn2Click={() => {
