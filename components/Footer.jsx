@@ -27,11 +27,11 @@ const Footer = () => {
         <div className="flex flex-col gap-y-8 justify-end">
         <h1 className="text-[16px] font-semibold">Contact details</h1>
         <div className="flex flex-col gap-6">
-          <p className="text-[18px]">+1 (7635) 547-12-97</p>
-          <Link href={'mailto:support@lineup.com'} className={`${inter.className} text-[16px]`}>support@lineup.com</Link>
+          {/* <p className="text-[18px]">+1 (7635) 547-12-97</p> */}
+          <Link href={'mailto:Support@lineup-events.com'} className={`${inter.className} text-[16px]`}>Support@lineup-events.com</Link>
           </div>
         </div>
-        <div className="flex flex-col gap-8">
+        {/* <div className="flex flex-col gap-8">
           <h1 className="text-[16px] font-semibold">Quick Links</h1>
           <div className="grid grid-cols-2 gap-x-32 gap-y-10 text-[14px] text-desc ">
             <Link href={'#'} className="">Product</Link>
@@ -39,10 +39,19 @@ const Footer = () => {
             <Link href={'#'} className="">Information</Link>
             <Link href={'#'} className="">Lift Media</Link>
           </div>
-        </div>
+        </div> */}
         <div className="flex-grow relative">
           <div className="absolute grid grid-cols-3 bottom-0 lg:right-0 gap-x-3">
-            <Link href={"#"}>
+            <Link href={"https://www.instagram.com/lineupafterdark/"}>
+              <Image
+                src="/icons/Instagram.png"
+                height={35.72}
+                width={31.11}
+                className="cursor-pointer"
+                alt="Linkedin logo"
+              />
+            </Link>
+            {/* <Link href={"#"}>
               <Image
                 src="/icons/Linkedin.png"
                 height={35.72}
@@ -50,8 +59,8 @@ const Footer = () => {
                 className="cursor-pointer"
                 alt="Linkedin logo"
               />
-            </Link>
-            <Link href={"#"}>
+            </Link> */}
+            {/* <Link href={"#"}>
               <Image
                 src="/icons/facebook.png"
                 height={35.72}
@@ -68,7 +77,7 @@ const Footer = () => {
                 className="cursor-pointer"
                 alt="Twitter logo"
               />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
