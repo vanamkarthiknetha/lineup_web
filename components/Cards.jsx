@@ -19,8 +19,8 @@ const FeatureCard = ({
       transition={{ duration: 0.7, ease: "easeOut" }}
       className={` flex  ${
         vertical
-          ? "flex-col lg:flex-row h-[80vh] lg:h-[40vh]"
-          : "flex-col h-[80vh] lg:h-[90vh]"
+          ? "flex-col lg:flex-row h-[60vh] xs:h-[80vh] lg:h-[40vh]"
+          : "flex-col h-[60vh] xs:h-[80vh] lg:h-[90vh]"
       } relative rounded-2xl overflow-hidden bg-bgcard  border border-[#303133]  ${
         !vertical && major ? "lg:w-[75%]" : ""
       }`}
