@@ -26,6 +26,7 @@ export async function GET(request) {
         "Who are you?": item.userType,
         "Who are you?(Others)": item.userTypeDescription,
         "Want to be part of our beta test?": item.betaTest?"Yes":"No",
+        "Date": new Date(item.createdAt).toISOString().split('T')[0], // Format createdAt date
       }));
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
