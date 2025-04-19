@@ -17,10 +17,10 @@ const FeatureCard = ({
       initial={{ y: 80, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : {}}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className={` flex  ${
+      className={` flex justify-between ${
         vertical
-          ? "flex-col lg:flex-row h-[60vh] xs:h-[80vh] lg:h-[40vh]"
-          : "flex-col h-[60vh] xs:h-[80vh] lg:h-[90vh]"
+          ? "flex-col lg:flex-row h-[100vh] xs:h-[80vh] lg:h-[40vh]"
+          : "flex-col h-[100vh] xs:h-[80vh] lg:h-[90vh]"
       } relative rounded-2xl overflow-hidden bg-bgcard  border border-[#303133]  ${
         !vertical && major ? "lg:w-[75%]" : ""
       }`}
@@ -35,8 +35,8 @@ const FeatureCard = ({
         <p className="text-[20px] ">{description}</p>
       </div>
       <div
-        className={`hidden xs:flex = ${
-          vertical ? "w-full lg:w-1/2 h-full" : " h-3/5"
+        className={`flex = ${
+          vertical ? "w-full lg:w-1/2 h-full" : " h-auto xs:h-3/5"
         }  lg:items-center lg:justify-around `}
       >
         <img
