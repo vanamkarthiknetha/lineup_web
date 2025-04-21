@@ -63,10 +63,10 @@ export default function ForWho() {
         initial={{ y: 80, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative w-full h-[80vh] xs:h-[60vh] sm:h-[75vh] overflow-x-auto overflow-y-hidden hide-scrollbar"
+        className="relative w-full h-[56vh] xs:h-[55vh] sm:h-[65vh] overflow-x-auto overflow-y-hidden hide-scrollbar "
       >
         {/* Flex container for centering content */}
-        <div className="flex pl-24 sm:pl-0 xl:justify-center gap-4 whitespace-nowrap">
+        <div className="flex pl-24 sm:pl-0 xl:justify-center gap-4 whitespace-nowrap ">
           {mobileScreens.map((screen, index) => {
             return (
               <div
@@ -79,13 +79,10 @@ export default function ForWho() {
               >
                 {/* Phone frame with hover effect */}
                 <div
-                  className={` transform transition-transform duration-500 ${
-                    hoveredIndex === index ? "scale-125" : "scale-100"
+                  className={`w-[12rem] h-[23rem] xs:w-[14rem] xs:h-[29rem] transform transition-transform duration-500 ${
+                    hoveredIndex === index ? "scale-125" : "scale-40"
                   }`}
-                  style={{
-                    width: "14rem",
-                    height: "32rem",
-                  }}
+                  
                 >
                   {/* Full image */}
                   <img
@@ -113,7 +110,7 @@ export default function ForWho() {
         <p className="text-desc text-[15px]">
           nightclub, bar, restaurant, or any venue looking to host events.
         </p>
-        <p className="text-[20px] max-w-[95%] sm:max-w-[55%] mx-auto mt-10">
+        <p className="text-[20px] max-w-[95%] sm:max-w-[55%] mx-auto mt-2 xs:mt-5">
           Nightclub, bar, restaurant, boutique—or any spot? LineUp got you .
           List your venue, get discovered by the city's greatest event
           organizers, or book DJs, collectives, labels to pack your space.
@@ -128,7 +125,7 @@ export default function ForWho() {
             <p className="text-desc text-[15px]">
               {descriptions[hoveredIndex]?.tagline}
             </p>
-            <p className="text-[20px] max-w-[95%] sm:max-w-[55%] mx-auto mt-10">
+            <p className="text-[20px] max-w-[95%] sm:max-w-[55%] mx-auto mt-2 xs:mt-5">
               {descriptions[hoveredIndex]?.desc}
             </p>
           </>
