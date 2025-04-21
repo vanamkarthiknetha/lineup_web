@@ -86,7 +86,7 @@ const Footer = () => {
           <p
             className={`${inter.className} mx-auto font-[16px]  p-10 `}
           >
-            © 2020 Lift Media. All rights reserved
+            © 2020. All rights reserved
           </p>
         </div>
       </div>
