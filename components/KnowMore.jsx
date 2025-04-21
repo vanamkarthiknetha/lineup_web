@@ -5,7 +5,7 @@ const KnowMore = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   return (
-    <section className=" flex flex-col lg:flex-row py-10 justify-between lg:h-screen mx-6 lg:mx-14 gap-14 lg:gap-0">
+    <section className=" flex flex-col lg:flex-row py-10 justify-around lg:h-screen mx-6 lg:mx-14 gap-14 lg:gap-0">
       <motion.div
         ref={ref}
         initial={{ y: 80, opacity: 0 }}
@@ -33,25 +33,87 @@ const KnowMore = () => {
           </div>
         </div>
       </motion.div>
-      <div className=" grid grid-cols-4 gap-4 mx-6 lg:mx-14">
-        {Array.from({ length: 17 }, (_, i) => {
-          const ref = useRef(null);
-          const isInView = useInView(ref, { once: true, amount: 0.3 });
-          return (
-            <motion.img
-              ref={ref}
-              initial={{ y: 80, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              key={i}
-              src={`/knowmore/flags/${i + 1}.png`}
-              width={90}
-              height={90}
-              alt={`Image ${i + 1}`}
-              className=""
-            />
-          );
-        })}
+      <div className="flex flex-row justify-between my-auto gap-4 mx-6 lg:mx-14">
+        <div className="flex flex-col gap-5">
+          {Array.from({ length: 5 }, (_, i) => {
+            const ref = useRef(null);
+            const isInView = useInView(ref, { once: true, amount: 0.3 });
+            return (
+              <motion.img
+                ref={ref}
+                initial={{ y: 80, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                key={i}
+                src={`/knowmore/flags/f${i + 1}.png`}
+                width={105}
+                height={105}
+                alt={`Image`}
+                className=""
+              />
+            );
+          })}
+        </div>
+        <div className="flex flex-col gap-5">
+          {Array.from({ length: 4 }, (_, i) => {
+            const ref = useRef(null);
+            const isInView = useInView(ref, { once: true, amount: 0.3 });
+            return (
+              <motion.img
+                ref={ref}
+                initial={{ y: 80, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                key={i}
+                src={`/knowmore/flags/f${i + 5 + 1}.png`}
+                width={105}
+                height={105}
+                alt={`Image`}
+                className=""
+              />
+            );
+          })}
+        </div>
+        <div className="flex flex-col gap-5">
+          {Array.from({ length: 4 }, (_, i) => {
+            const ref = useRef(null);
+            const isInView = useInView(ref, { once: true, amount: 0.3 });
+            return (
+              <motion.img
+                ref={ref}
+                initial={{ y: 80, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                key={i}
+                src={`/knowmore/flags/f${i + 10}.png`}
+                width={105}
+                height={105}
+                alt={`Image`}
+                className=""
+              />
+            );
+          })}
+        </div>
+        <div className="flex flex-col gap-5">
+          {Array.from({ length: 4 }, (_, i) => {
+            const ref = useRef(null);
+            const isInView = useInView(ref, { once: true, amount: 0.3 });
+            return (
+              <motion.img
+                ref={ref}
+                initial={{ y: 80, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                key={i}
+                src={`/knowmore/flags/f${i + 14}.png`}
+                width={105}
+                height={105}
+                alt={`Image`}
+                className=""
+              />
+            );
+          })}
+        </div>
       </div>
     </section>
   );
