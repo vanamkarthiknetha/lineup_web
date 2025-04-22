@@ -1,5 +1,5 @@
 "use client"
-import Cards from "@/components/Cards";
+import CardsSection from "@/components/CardsSection";
 import Cover from "@/components/Cover";
 import Footer from "@/components/Footer";
 import ForWho from "@/components/ForWho";
@@ -21,7 +21,7 @@ export default function Home() {
     <main className="flex flex-col bg-bghero ">
 
       <HeroSection /> 
-      <Cards/>
+      <CardsSection/>
       <ForWho/>
       <Cover/> 
       <HowToOrganize/>
