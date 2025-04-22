@@ -63,7 +63,7 @@ export default function ForWho() {
         initial={{ y: 80, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative w-full h-[56vh] xs:h-[55vh] sm:h-[65vh] overflow-x-auto overflow-y-hidden hide-scrollbar "
+        className="relative w-full h-[68vh] xs:h-[54vh] sm:h-[65vh] overflow-x-auto overflow-y-hidden hide-scrollbar "
       >
         {/* Flex container for centering content */}
         <div className="flex pl-24 sm:pl-0 xl:justify-center gap-4 whitespace-nowrap ">
@@ -79,8 +79,8 @@ export default function ForWho() {
               >
                 {/* Phone frame with hover effect */}
                 <div
-                  className={`w-[12rem] h-[23rem] xs:w-[14rem] xs:h-[29rem] transform transition-transform duration-500 ${
-                    hoveredIndex === index ? "scale-125" : "scale-40"
+                  className={`w-[12rem] h-[26rem] xs:w-[14rem] xs:h-[29rem] transform transition-transform duration-500 ${
+                    hoveredIndex === index ? "scale-125" : "scale-110 xs:scale-75"
                   }`}
                   
                 >
