@@ -63,7 +63,7 @@ export default function ForWho() {
         initial={{ y: 80, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative w-full h-[68vh] xs:h-[56vh] sm:h-[65vh] overflow-x-auto overflow-y-hidden hide-scrollbar "
+        className="relative w-full h-[68vh] xs:h-[56.2vh] sm:h-[65vh] overflow-x-auto overflow-y-hidden hide-scrollbar "
       >
         {/* Flex container for centering content */}
         <div className="flex pl-24 sm:pl-0 xl:justify-center gap-4 whitespace-nowrap ">
