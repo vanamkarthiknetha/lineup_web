@@ -117,9 +117,9 @@ export default function HowToOrganize() {
             <div className="mx-auto h-full">
               {/* Card with equal halves */}
               <div className="bg-bgcard h-full border border-[#303133] rounded-xl overflow-hidden mx-4">
-                <div className="flex flex-col md:flex-row gap-14 sm:gap-0 h-full">
+                <div className="flex flex-col xl:flex-row gap-14 sm:gap-0 h-full">
                   {/* Left side - content */}
-                  <div className="h-full w-full md:w-1/2 pt-5 sm:pt-16 px-5 sm:px-14 flex flex-col ">
+                  <div className="h-full w-full xl:w-1/2 pt-5 sm:pt-16 px-5 sm:px-14 flex flex-col ">
                     <div className=" text-[30px] font-semibold  ">
                       {item.number}
                     </div>
@@ -132,7 +132,7 @@ export default function HowToOrganize() {
                   </div>
 
                   {/* Right side - image */}
-                  <div className="h-full w-full md:w-1/2 bg-gray-900">
+                  <div className="h-full w-full xl:w-1/2 bg-gray-900">
                     <div className="h-full flex items-center justify-center">
                       <img
                         src={item.image}
