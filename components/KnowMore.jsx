@@ -24,7 +24,7 @@ const KnowMore = () => {
               what they're into, and make sure the crowd matches your energy.
             </p>
           </div>
-          <div className="h-1/2">
+          <div className="">
             <img
               src="/knowmore/knowmore.png"
               alt="cover photo"
