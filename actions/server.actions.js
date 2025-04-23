@@ -14,9 +14,11 @@ export const joinWaitList = async (
     const { name, surname, email, countryCode, phone } = details;
     // Validate required fields
     if (
-      !selectedPlanOption ||
-      !selectedUserType ||
-      (selectedUserType === "Other" && !otherValue) ||
+      !selectedPlanOption || 
+      selectedPlanOption.length === 0 ||
+      !selectedUserType || 
+      selectedUserType.length === 0 ||
+      (selectedUserType.includes("Other") && !otherValue) ||
       !selectedBetaOption ||
       !name ||
       !surname ||
@@ -44,7 +46,7 @@ export const joinWaitList = async (
     const waitlistEntry = await Waitlist.create({
       purpose: selectedPlanOption,
       userType: selectedUserType,
-      userTypeDescription: otherValue,
+      userTypeDescription: selectedUserType.includes("Other") ? otherValue : "",
       betaTest: selectedBetaOption==="Yes"?true:false,
       name,
       surname,

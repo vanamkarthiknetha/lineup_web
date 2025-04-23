@@ -29,15 +29,27 @@ const Plan = () => {
           <div key={index} className="flex items-center my-2">
             <div
               className="h-6 w-6 rounded-full border-2 border-white flex items-center justify-center mr-3 cursor-pointer"
-              onClick={() => setSelectedPlanOption(selectedPlanOption?null:option)}
+              onClick={() => {
+                if (selectedPlanOption.includes(option)) {
+                  setSelectedPlanOption(selectedPlanOption.filter(item => item !== option));
+                } else {
+                  setSelectedPlanOption([...selectedPlanOption, option]);
+                }
+              }}
             >
-              {selectedPlanOption === option && (
+              {selectedPlanOption.includes(option) && (
                 <div className="h-4 w-4 bg-white rounded-full"></div>
               )}
             </div>
             <label
               className="cursor-pointer font-medium text-[20px] w-full"
-              onClick={() => setSelectedPlanOption(selectedPlanOption?null:option)}
+              onClick={() => {
+                if (selectedPlanOption.includes(option)) {
+                  setSelectedPlanOption(selectedPlanOption.filter(item => item !== option));
+                } else {
+                  setSelectedPlanOption([...selectedPlanOption, option]);
+                }
+              }}
             >
               {option}
             </label>
@@ -49,10 +61,10 @@ const Plan = () => {
         btn2Text="Next"
         handleBtn1Click={() => router.back()}
         handleBtn2Click={() => {
-          if (selectedPlanOption === null) {
-            toast.info("Please select an option",toastStyles);
+          if (selectedPlanOption.length === 0) {
+            toast.info("Please select at least one option", toastStyles);
             return
-            } 
+          } 
           router.push("/join-waitlist/who");
         }}
       />

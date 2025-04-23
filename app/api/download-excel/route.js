@@ -22,12 +22,13 @@ export async function GET(request) {
         surname: item.surname,
         email: item.email,
         phone: item.phone,
-        "What do you plan to use LineUp for?": item.purpose,
-        "Who are you?": item.userType,
+        "What do you plan to use LineUp for?": Array.isArray(item.purpose) ? item.purpose.join(", ") : item.purpose,
+        "Who are you?": Array.isArray(item.userType) ? item.userType.join(", ") : item.userType,
         "Who are you?(Others)": item.userTypeDescription,
         "Want to be part of our beta test?": item.betaTest?"Yes":"No",
         "Date": new Date(item.createdAt).toISOString().split('T')[0], // Format createdAt date
       }));
+      console.log(data)
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Data');

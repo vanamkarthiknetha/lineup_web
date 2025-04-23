@@ -37,15 +37,27 @@ const Who = () => {
             <div key={index} className="flex items-center my-2">
               <div
                 className="h-6 w-6 rounded-full border-2 border-white flex items-center justify-center mr-3 cursor-pointer"
-                onClick={() => setSelectedUserType(option)}
+                onClick={() => {
+                  if (selectedUserType.includes(option)) {
+                    setSelectedUserType(selectedUserType.filter(item => item !== option));
+                  } else {
+                    setSelectedUserType([...selectedUserType, option]);
+                  }
+                }}
               >
-                {selectedUserType === option && (
+                {selectedUserType.includes(option) && (
                   <div className="h-4 w-4 bg-white rounded-full"></div>
                 )}
               </div>
               <label
                 className="cursor-pointer font-medium text-[20px] w-full"
-                onClick={() => setSelectedUserType(option)}
+                onClick={() => {
+                  if (selectedUserType.includes(option)) {
+                    setSelectedUserType(selectedUserType.filter(item => item !== option));
+                  } else {
+                    setSelectedUserType([...selectedUserType, option]);
+                  }
+                }}
               >
                 {option}
               </label>
@@ -57,21 +69,33 @@ const Who = () => {
             <div key={index} className="flex items-center my-2">
               <div
                 className="h-6 w-6 rounded-full border-2 border-white flex items-center justify-center mr-3 cursor-pointer"
-                onClick={() => setSelectedUserType(selectedUserType?null:option)}
+                onClick={() => {
+                  if (selectedUserType.includes(option)) {
+                    setSelectedUserType(selectedUserType.filter(item => item !== option));
+                  } else {
+                    setSelectedUserType([...selectedUserType, option]);
+                  }
+                }}
               >
-                {selectedUserType === option && (
+                {selectedUserType.includes(option) && (
                   <div className="h-4 w-4 bg-white rounded-full"></div>
                 )}
               </div>
               <label
                 className="cursor-pointer font-medium text-[20px] w-full"
-                onClick={() => setSelectedUserType(selectedUserType?null:option)}
+                onClick={() => {
+                  if (selectedUserType.includes(option)) {
+                    setSelectedUserType(selectedUserType.filter(item => item !== option));
+                  } else {
+                    setSelectedUserType([...selectedUserType, option]);
+                  }
+                }}
               >
                 {option}
               </label>
             </div>
           ))}
-          {selectedUserType === "Other" && (
+          {selectedUserType.includes("Other") && (
             <div className="mt-2">
               <input
                 type="text"
@@ -90,11 +114,11 @@ const Who = () => {
         btn2Text="Next"
         handleBtn1Click={() => router.back()}
         handleBtn2Click={() => {
-          if (selectedUserType === null) {
-            toast.info("Please select an option", toastStyles);
+          if (selectedUserType.length === 0) {
+            toast.info("Please select at least one option", toastStyles);
             return;
           }
-          if (selectedUserType === "Other" && !otherValue) {
+          if (selectedUserType.includes("Other") && !otherValue) {
             toast.info("Enter other value", toastStyles);
             return;
           }

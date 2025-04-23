@@ -6,8 +6,8 @@ export const JoinWaitListContext=createContext();
 
 
 export const JoinWaitListState = (props) => {
-  const [selectedPlanOption, setSelectedPlanOption] = useState(null);
-  const [selectedUserType, setSelectedUserType] = useState(null);
+  const [selectedPlanOption, setSelectedPlanOption] = useState([]);
+  const [selectedUserType, setSelectedUserType] = useState([]);
   const [otherValue, setOtherValue] = useState('');
   const [selectedBetaOption, setselectedBetaOption] = useState(null);
   const [details, setDetails] = useState({
