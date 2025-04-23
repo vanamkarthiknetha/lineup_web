@@ -28,7 +28,6 @@ export async function GET(request) {
         "Want to be part of our beta test?": item.betaTest?"Yes":"No",
         "Date": new Date(item.createdAt).toISOString().split('T')[0], // Format createdAt date
       }));
-      console.log(data)
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Data');
