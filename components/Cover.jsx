@@ -10,7 +10,7 @@ const Cover = () => {
       initial={{ y: 80, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : {}}
       transition={{ duration: 0.7, ease: "easeOut" }}
-    className="relative h-[50vh] sm:h-[85vh] w-full overflow-hidden mt-20">
+    className="relative h-[50vh] sm:h-screen w-full overflow-hidden mt-20">
       {/* Background image */}
       <img 
         src="/cover/iPhone 16 Pro.png" 
